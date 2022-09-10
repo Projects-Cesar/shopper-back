@@ -1,0 +1,10 @@
+
+- Java: 17
+
+- Spring tool: 4
+
+- Postgresql: 12
+
+
+
+
