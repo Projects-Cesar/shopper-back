@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "206ce226-a700-4d96-b8f4-eea59a2d9bbe",
+		"name": "Operaciones Shopper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lista Productos por Entregar",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Detalle recojo y entrega Pedido",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmación Recojo / Entrega",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

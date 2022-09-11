@@ -1,0 +1,70 @@
+---------------------------------------------------------------------
+PROCESO DE COMPRA
+---------------------------------------------------------------------
+
+http://localhost:9999/api/categoriaproducto/list
+* Categoría de producto
+IN: Nada
+OUT: Grid de listado de categoría de productos (imagen, nombre de categoría)
+BR: Lista de categorías de producto disponibles
+
+
+http://localhost:9999/api/tienda/list
+* Seleccionar tienda
+IN: Categoría de producto
+OUT: Grid de listado de las tiendas(id, nombre de tienda, tiempo de demora)
+BR: Listado de tiendas disponibles
+
+
+http://localhost:9999/api/producto/list
+* Listado de productos disponibles
+IN: Tienda
+OUT: GridProductos, Precios, Marcas, cantidad(id,productos, marcas, precio)
+BR: Muestra catálago de productos con sus especificaciones seccionados
+
+http://localhost:9999/api/detalleorden/list
+* Carrito de compra
+IN: Id Producto, cantidad
+OUT: Nombre de tienda, Lista de productos seleccionados(id, nombre producto, precio, costo de delivery)
+BR: Mostrara listado y cantidad de produtos añadidos al carrito de compra
+
+http://localhost:9999/api/detalleorden/update/1
+* Modificar compra
+IN: Cantidad de producto
+OUT: Cantidad actualizada
+BR: Mostrar ventana para editar la cantidad de los productos sin necesidad de regresar a la tienda
+
+
+http://localhost:9999/api/metodopago/list
+* Elegir método de pago
+IN:  Nada
+OUT: Lista de Tarjetas 
+BR: Mostrar listado de tarjetas con las que se puede pagar
+
+
+* Confirmar compra
+IN: Direccion de entrega, Metodo de pago, Numero de cellular
+OUT: Monto final(Id,compra)
+BR: Realizar compra de productos seleccionados
+
+
+--------------------------------------------------------------------
+OPERACIONES DE SHOPPER
+--------------------------------------------------------------------
+
+* Lista de productos por entregar
+IN: Nada
+OUT: Listado de pendientes(Logo de tienda, Fecha de pedido)
+BR: Muestra listado de tiendas pendientes por hacer entrega de productos
+
+
+* Detalles de recojo y entrega de pedido
+IN: Nada
+OUT: Instrucciones , tienda , direccionTienda , nombreCliente, direccionCliente ,cantidadProductos
+BR: Muestra detalle de la dirección de la tienda donde shopper irá a recoger pedido y dirección de comprador donde entregará producto
+
+
+* Confirmación de recojo/entrega
+IN: Nada
+OUT: Estado de pedido(despachado/entregado)
+BR: Pedido despachado( shopper recogió pedido de la tienda) o Pedido entregado (shopper entregó producto a comprador) 
